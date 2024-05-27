@@ -1,0 +1,70 @@
+COMMUTATEUR S1 
+Current configuration : 1345 bytes
+!
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname S1
+!
+enable secret 5 $1$mERr$a0GeYJfHu.Q40l1rQ3cK7.
+!
+!
+!
+no ip domain-lookup
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id 
+
+
+
+
+COMMUTATEUR S2  
+Current configuration : 1312 bytes
+!
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Switch
+!
+enable secret 5 $1$mERr$a0GeYJfHu.Q40l1rQ3cK7.
+!
+!
+!
+no ip domain-lookup
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id 
+ 
+!
+
+
+
+ROUTEUR 
+Current configuration : 870 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname R1
+!
+!
+!
+enable secret 5 $1$mERr$a0GeYJfHu.Q40l1rQ3cK7.
+!
+!
+!
+!
+!
+!
+no ip cef
+no ipv6 cef
